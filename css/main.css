@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #272b30;
+    color: white;
+    font-family: "Comfortaa", cursive;
+
+}
+
+.header img {
+    max-height: 30vh;
+    object-fit: cover;
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 0.625rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #272b30;
+    border-radius: 50px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%) inset;
+}
+body::-webkit-scrollbar-track {
+    background-color: var(--seconde-color);
+}
+.navbar {
+    background-color: rgb(58, 73, 123) !important;
+    margin-inline: auto;
+    margin-top: -30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 70%);
+}
+.navbar-brand img {
+    width: 40px;
+}
+.nav-link {
+    color: white;
+    font-size: 13px;
+}
+.nav-link.active,
+.nav-link:hover {
+    color: #09c !important;
+    transition: color 0.5s;
+}
+.badge-color {
+    background-color: #32383e;
+}
+.card a {
+    padding: 2px 6px !important;
+    color: #fff !important;
+    background-color: RGBA(13, 110, 253, var(--bs-bg-opacity, 1)) !important;
+    font-size: small;
+    font-weight: bold;
+}
+.card {
+    transition: transform 0.5s, filter 0.5s 0.1s;
+    filter: grayscale(0.7);
+}
+.card:hover {
+    transform: scale(1.05);
+    filter: grayscale(0);
+    cursor: pointer;
+}
+.loading {
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background-color: #272b30e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #fff;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    position: relative;
+
+}
+.loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-left: 4px solid #ff3d00;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
